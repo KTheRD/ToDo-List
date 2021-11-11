@@ -1,7 +1,6 @@
-.ItemUl{
+ul{
   list-style-type: none;
 }
-
-.FirstList{
-  padding: 0px;
+.firstList{
+  padding-left: 0;
 }

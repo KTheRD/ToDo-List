@@ -5,6 +5,7 @@ import AddForm from "./components/AddForm/AddForm";
 import * as uuid from "uuid";
 
 import "./ToDoList.css"
+import { Box } from "@mui/system";
 
 const ToDoList = (props) => {
 
@@ -91,7 +92,17 @@ const ToDoList = (props) => {
   useEffect(() => setItems(JSON.parse(localStorage.getItem("items")) || []), []); 
 
   return (
-    <div className = "ToDoList">
+    <Box 
+      sx={{
+        "padding": "20px",
+        "margin": "auto",
+        "marginTop": "100px",
+        "maxWidth": "800px",
+        "borderRadius": "5px",
+        "backgroundColor": "#304D63",
+        "boxShadow": "0 0 15px 7px rgba(0, 0, 0, 0.247)",
+      }}
+    >
       <AddForm
         addItem = {addItem}
         parentKey = {[]}
@@ -104,7 +115,7 @@ const ToDoList = (props) => {
         editItem = {editItem}
         addItem = {addItem}
       />
-    </div>  
+    </Box>  
   );
 }
 

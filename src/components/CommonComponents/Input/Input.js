@@ -45,16 +45,15 @@ const Input = (props) => {
     <>
       <TextField 
         label={props.defaultValue}
-        variant="standard" 
+        variant="outlined" 
         //ref = {inputRef}
         value={value} 
         onChange={inputHandler} 
         onKeyPress={keyPressHandler} 
         onKeyDown = {keyDownHandler}
+        size="small"
+        hiddenLabel
         autoFocus 
-        sx = {{
-          "flex-grow": 1
-        }}
       />
       <Button action={buttonHandler} buttonText={props.buttonText}/>
     </>
